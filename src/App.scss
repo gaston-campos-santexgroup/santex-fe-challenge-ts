@@ -65,3 +65,23 @@ $description-width: calc(100 - $img-width - $name-slug-width - $button-width - $
     font-size: calc(5px + 0.9vmin);
   }
 }
+
+.product-cart {
+  display: flex;
+  width: 50%;
+  align-items: center;
+  justify-content: flex-start;
+  border: solid 1px black;
+  margin: 5px;
+  .name {
+    width: 50%;
+    
+  }
+  .price {
+    width: 35%;
+    
+  }
+  .quantity {
+    
+  }
+}

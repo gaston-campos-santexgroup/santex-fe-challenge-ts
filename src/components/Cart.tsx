@@ -5,8 +5,7 @@ interface FuncProps {
 export const Cart: React.FC<FuncProps> = ({ cart }) => {
     return (
         <>
-            <div>Cart</div>
-            <p>items:</p>
+            <div>Cart</div>            
             {cart.map((product) => (
                 <div className="product-cart">
                     <div className="name">{product.name}</div>
