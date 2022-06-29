@@ -14,19 +14,21 @@ function App() {
   const [cart, addItemToCart] = useState<CartProduct[]>([]);
 
   const buyItem = (item: Item) => {
+    console.log(`se compra ${item.name}`)
     addTotalQuantity(totalQuantity + item.assets.length);
     addTotalPrice(totalPrice + item.variantList.items[0].price)
-    addItemToCart(prevStateCart => {
-      const cartItem: CartProduct = prevStateCart.find(x => x.id === item.id) ?? Object.assign({ quantity: 0 }, item);
-      const cartItemIndex: number = prevStateCart.findIndex(x => x.id === item.id);
-      cartItem.quantity = cartItem.quantity + 1;
+    addItemToCart(prevStateCart => {      
+      const newStateCart: CartProduct[] = JSON.parse(JSON.stringify(prevStateCart));
+      const cartItem: CartProduct = newStateCart.find(x => x.id === item.id) ?? Object.assign({ quantity: 0 }, item);
+      const cartItemIndex: number = newStateCart.findIndex(x => x.id === item.id);
 
+      cartItem.quantity = cartItem.quantity + 1;
       if (cartItemIndex === -1) {
-        return [...prevStateCart, cartItem];
+        return [...newStateCart, cartItem];
       }
       else {
-        prevStateCart[cartItemIndex] = cartItem;
-        return prevStateCart
+        newStateCart[cartItemIndex] = cartItem;
+        return newStateCart
       }
     });
   }
