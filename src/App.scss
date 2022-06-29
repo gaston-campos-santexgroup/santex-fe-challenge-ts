@@ -1,0 +1,67 @@
+.App {
+  text-align: center;
+}
+
+.header {
+  background-color: #282c34;
+  min-height: 10vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  padding: 0 10px 0 10px;
+  .logo {
+    height: 4vh;
+    pointer-events: none;
+  }
+}
+
+$product-height: 45px;
+$product-border-height: 1px;
+$product-padding-width: 1;
+$img-width: 4;
+$name-slug-width: 15;
+$button-width: 15;
+$description-width: calc(100 - $img-width - $name-slug-width - $button-width - $product-padding-width * 2);
+
+.product {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: $product-height;
+  font-size: calc(5px + 1vmin);
+  padding: 0 $product-padding-width * 1%;
+  border: solid 1px black;
+  margin: 1% 0;
+  img {
+    height: calc($product-height - 2 * $product-border-height);
+    width: $img-width * 1%;
+    aspect-ratio: attr(width) / attr(height);
+  }
+  .name-slug {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: $name-slug-width * 1%;
+    .name {
+      font-weight: 600;
+    }
+    .slug {
+      font-size: calc(5px + 0.5vmin);
+    }
+  }
+  .description {
+    padding: 0 5px;
+    font-size: calc(5px + 0.5vmin);
+    width: $description-width * 1%;
+  }
+  button {
+    width: $button-width * 1%;
+    height: 5vh;
+    font-size: calc(5px + 0.9vmin);
+  }
+}
