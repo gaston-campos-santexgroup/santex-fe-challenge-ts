@@ -5,7 +5,12 @@ interface FuncProps {
 export const Cart: React.FC<FuncProps> = ({ cart }) => {
     return (
         <>
-            <div>Cart</div>            
+            <div>Cart</div>    
+            <div className="product-cart">
+                    <div className="name">Nombre Producto</div>
+                    <div className="price">Precio</div>
+                    <div className="quantity">Cantidad</div>
+                </div>        
             {cart.map((product) => (
                 <div className="product-cart">
                     <div className="name">{product.name}</div>
