@@ -42,6 +42,10 @@ export interface FeaturedAsset {
     source: string;
 }
 
+export interface CartProduct extends Item {
+    quantity: number;
+}
+
 
 
 
