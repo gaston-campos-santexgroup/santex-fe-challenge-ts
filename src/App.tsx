@@ -1,23 +1,26 @@
 import { useState } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { useQuery } from '@apollo/client';
 import { Header } from './components/Header'
-import './App.scss'
-import { CartProduct, Item } from './interfaces/product.interface';
 import { Product } from './components/Product';
-import productList from './data/products.json'
 import { Cart } from './components/Cart';
-
+import { CartProduct, Item } from './interfaces/product.interface';
+import './App.scss'
+import { PRODUCTS } from './graphql/queries';
 
 function App() {
+  const { loading, error, data } = useQuery(PRODUCTS);
   const [totalPrice, addTotalPrice] = useState(0);
   const [totalQuantity, addTotalQuantity] = useState(0);
   const [cart, addItemToCart] = useState<CartProduct[]>([]);
 
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>{`Error: ${error.message}`}</p>;
+  
   const buyItem = (item: Item) => {
-    console.log(`se compra ${item.name}`)
     addTotalQuantity(totalQuantity + item.assets.length);
     addTotalPrice(totalPrice + item.variantList.items[0].price)
-    addItemToCart(prevStateCart => {      
+    addItemToCart(prevStateCart => {
       const newStateCart: CartProduct[] = JSON.parse(JSON.stringify(prevStateCart));
       const cartItem: CartProduct = newStateCart.find(x => x.id === item.id) ?? Object.assign({ quantity: 0 }, item);
       const cartItemIndex: number = newStateCart.findIndex(x => x.id === item.id);
@@ -33,16 +36,14 @@ function App() {
     });
   }
 
-
-
   return (
     <>
       <BrowserRouter>
         <Header totalPrice={totalPrice} totalQuantity={totalQuantity}></Header>
         <Routes>
           <Route path="/" element={
-            productList.data.products.items.map((item: Item) => (
-              <Product item={item} buyItem={buyItem} />
+            data.products.items.map((item: Item) => (
+              <Product key={item.id} item={item} buyItem={buyItem} />
             ))
           } />
           <Route path="cart" element={<Cart cart={cart} />} />
