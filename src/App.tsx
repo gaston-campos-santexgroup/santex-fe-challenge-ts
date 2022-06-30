@@ -16,7 +16,7 @@ function App() {
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>{`Error: ${error.message}`}</p>;
-  
+
   const buyItem = (item: Item) => {
     addTotalQuantity(totalQuantity + item.assets.length);
     addTotalPrice(totalPrice + item.variantList.items[0].price)
@@ -47,6 +47,7 @@ function App() {
             ))
           } />
           <Route path="cart" element={<Cart cart={cart} />} />
+          <Route path="*" element={<main style={{ padding: "1rem" }}><p>Error 404 - Pagina no encontrada!</p></main>} />
         </Routes>
       </BrowserRouter>
     </>
