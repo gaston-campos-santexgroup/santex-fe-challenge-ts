@@ -36,3 +36,35 @@ export const PRODUCTS = gql`
     }
   }
 `;
+
+export const PRODUCTBYID = gql`
+  query {
+    product(id:1) {
+          id
+        name
+        slug
+        description  
+        variants {
+          id
+          name
+            
+        }
+      
+        variantList {
+          items {
+            price
+            
+          }
+        }
+
+        featuredAsset {
+          source
+        }
+          assets {
+          id
+          name
+          source          
+        }
+      }
+  }
+`;
