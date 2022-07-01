@@ -4,6 +4,7 @@ import { useQuery } from '@apollo/client';
 import { Header } from './components/Header'
 import { Product } from './components/Product';
 import { Cart } from './components/Cart';
+import { ProductDetail } from './components/ProductDetail';
 import { CartProduct, Item } from './interfaces/product.interface';
 import './App.scss'
 import { PRODUCTS } from './graphql/queries';
@@ -46,6 +47,7 @@ function App() {
               <Product key={item.id} item={item} buyItem={buyItem} />
             ))
           } />
+          <Route path="/product/:productId" element={<ProductDetail />} />
           <Route path="cart" element={<Cart cart={cart} />} />
           <Route path="*" element={<main style={{ padding: "1rem" }}><p>Error 404 - Pagina no encontrada!</p></main>} />
         </Routes>
