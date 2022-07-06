@@ -20,7 +20,7 @@ export const PRODUCTS = gql`
         variantList {
           items {
             price
-            
+            id
           }
         }
 
@@ -53,7 +53,7 @@ export const PRODUCTBYID = gql`
         variantList {
           items {
             price
-            
+            id
           }
         }
 
