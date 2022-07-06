@@ -1,13 +1,12 @@
 import { useState } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
-import { Header } from './components/Header'
-import { Product } from './components/Product';
-import { Cart } from './components/Cart';
-import { ProductDetail } from './components/ProductDetail';
-import { CartProduct, Item } from './interfaces/product.interface';
+
+import { Product, ProductDetail, Header, Cart } from './components';
+import { PRODUCTS } from './graphql';
+import { CartProduct, Item } from './interfaces';
 import './App.scss'
-import { PRODUCTS } from './graphql/queries';
+
 
 function App() {
   const { loading, error, data } = useQuery(PRODUCTS);

@@ -1,4 +1,4 @@
-import { CartProduct } from '../interfaces/product.interface'
+import { CartProduct } from '../../interfaces'
 interface FuncProps {
     cart: CartProduct[];
 }

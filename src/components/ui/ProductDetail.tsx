@@ -1,7 +1,9 @@
 import { useQuery } from '@apollo/client';
 import { useParams } from 'react-router-dom';
-import { PRODUCTBYID } from '../graphql/queries';
-import { Item } from '../interfaces/product.interface';
+import { PRODUCTBYID } from '../../graphql';
+import { Item } from '../../interfaces';
+
+
 
 export const ProductDetail = () => {
     let params = useParams();

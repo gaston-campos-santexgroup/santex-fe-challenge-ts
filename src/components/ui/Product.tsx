@@ -1,5 +1,5 @@
 import { Link, Outlet } from 'react-router-dom';
-import { ItemCard } from '../interfaces/product.interface'
+import { ItemCard } from '../../interfaces';
 
 export const Product: React.FC<ItemCard> = ({ item, buyItem }) => {
 

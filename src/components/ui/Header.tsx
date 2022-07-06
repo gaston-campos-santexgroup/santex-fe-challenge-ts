@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-import { Totals } from '../interfaces/totals.interface';
+import { Totals } from '../../interfaces';
 
 export const Header: React.FC<Totals> = ({ totalPrice, totalQuantity }) => {
     return (
