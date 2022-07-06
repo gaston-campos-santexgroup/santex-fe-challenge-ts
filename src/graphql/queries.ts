@@ -38,8 +38,8 @@ export const PRODUCTS = gql`
 `;
 
 export const PRODUCTBYID = gql`
-  query {
-    product(id:1) {
+  query GetProductById ($id:ID) {
+    product(id:$id) {
           id
         name
         slug

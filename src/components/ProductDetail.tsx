@@ -5,7 +5,7 @@ import { Item } from '../interfaces/product.interface';
 
 export const ProductDetail = () => {
     let params = useParams();
-    const { loading, error, data } = useQuery(PRODUCTBYID);
+    const { loading, error, data } = useQuery(PRODUCTBYID, { variables: { id: params.productId } });
     if (loading) return <p>Loading...</p>;
     if (error) return <p>{`Error: ${error.message}`}</p>;
 
@@ -13,7 +13,7 @@ export const ProductDetail = () => {
     return (
         <div className="product-detail">
             <div className="groped-data-1">
-                <div className="name">{productData.name} ID: {params.productId}</div>
+                <div className="name">{productData.name} ID: {productData.id}</div>
                 <div className="slug">{productData.slug}</div>
                 <div className="price">${productData.variantList.items[0].price.toLocaleString('es-AR', { minimumFractionDigits: 0 })}</div>
             </div>
