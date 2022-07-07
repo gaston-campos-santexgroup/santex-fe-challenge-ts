@@ -12,11 +12,11 @@ export interface AddItemToOrderInputs {
 export interface AddItemToOrder {
     totalQuantity: number;
     total: number;
-    createdAt: Date;
+    createdAt?: Date;
     id: string;
-    code: string;
+    code?: string;
     orderPlacedAt?: any;
-    state: string;
+    state?: string;
     lines: Line[];
 }
 
