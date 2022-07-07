@@ -1,3 +1,5 @@
+import { AddItemToOrder } from './cart.interface';
+
 export interface Products {
     items: Item[];
 
@@ -22,7 +24,7 @@ export interface Asset {
 }
 
 export interface ItemCard {
-    buyItem(item: Item): void;
+    buyItem(updatedOrder: AddItemToOrder): void;
     item: Item;
 }
 
@@ -36,25 +38,9 @@ export interface VariantList {
 
 export interface ItemPrice {
     price: number;
+    id: number;
 }
 
 export interface FeaturedAsset {
     source: string;
 }
-
-export interface CartProduct extends Item {
-    quantity: number;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
