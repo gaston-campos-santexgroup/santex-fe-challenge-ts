@@ -6,7 +6,7 @@ export interface Totals {
 export interface AddItemToOrderInputs {
     itemVariantId: number;
     quantity: number;
-    buyItem(updatedOrder: AddItemToOrder): void;
+    addItemToCart(updatedOrder: AddItemToOrder): void;
 }
 
 export interface AddItemToOrder {

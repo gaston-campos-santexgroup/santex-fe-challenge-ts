@@ -24,7 +24,7 @@ export interface Asset {
 }
 
 export interface ItemCard {
-    buyItem(updatedOrder: AddItemToOrder): void;
+    addItemToCart(updatedOrder: AddItemToOrder): void;
     item: Item;
 }
 
