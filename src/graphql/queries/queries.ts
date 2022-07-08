@@ -68,3 +68,27 @@ export const PRODUCTBYID = gql`
       }
   }
 `;
+
+export const GETACTIVEORDER = gql`
+query GetActiveOrder {
+  activeOrder {
+      totalQuantity
+      total
+      createdAt
+      id
+      code
+      orderPlacedAt
+      state
+      lines
+      {
+        quantity
+        productVariant{
+          id            
+          productId
+          name
+          price
+        }
+      }        
+    }
+}`;
+
