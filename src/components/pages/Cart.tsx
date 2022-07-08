@@ -1,8 +1,10 @@
-import { Line } from '../../interfaces'
-interface FuncProps {
-    cart: Line[];
-}
-export const Cart: React.FC<FuncProps> = ({ cart }) => {
+import { useContext } from 'react';
+import { CartContext } from '../../context';
+
+export const Cart: React.FC = () => {
+
+    const { order } = useContext(CartContext);
+
     return (
         <>
             <div>Cart</div>
@@ -11,7 +13,7 @@ export const Cart: React.FC<FuncProps> = ({ cart }) => {
                 <div className="price">Precio</div>
                 <div className="quantity">Cantidad</div>
             </div>
-            {cart.map((product) => (
+            {order.lines.map((product) => (
                 <div className="product-cart">
                     <div className="name">{product.productVariant.name}</div>
                     <div className="price">${product.productVariant.price.toLocaleString('es-AR', { minimumFractionDigits: 0 })}</div>
