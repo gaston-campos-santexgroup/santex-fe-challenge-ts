@@ -1,12 +1,6 @@
-export interface Totals {
-    totalPrice: number;
-    totalQuantity: number;
-}
-
 export interface AddItemToOrderInputs {
     itemVariantId: number;
-    quantity: number;
-    addItemToCart(updatedOrder: AddItemToOrder): void;
+    quantity: number;    
 }
 
 export interface AddItemToOrder {

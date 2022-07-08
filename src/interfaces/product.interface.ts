@@ -22,12 +22,6 @@ export interface Asset {
     source: string;
 
 }
-
-export interface ItemCard {
-    addItemToCart(updatedOrder: AddItemToOrder): void;
-    item: Item;
-}
-
 export interface Variant {
     id: string;
     name: string;
