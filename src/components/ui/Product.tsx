@@ -7,11 +7,12 @@ interface IFuncProd {
 }
 
 export const Product: React.FC<IFuncProd> = ({ item }) => {
-
+    const { price, id } = item.variantList.items[0];
+    const { source } = item.assets[0];
     return (
         <>
             <div className='product'>
-                <img src={item.assets[0].source} alt={item.name} />
+                <img src={source} alt={item.name} />
                 <div className="name-slug">
                     <Link
                         style={{ display: "block", margin: "0" }}
@@ -22,13 +23,12 @@ export const Product: React.FC<IFuncProd> = ({ item }) => {
                     </Link>
 
                     <div className="slug">{item.slug}</div>
-                    <div className="price">${item.variantList.items[0].price.toLocaleString('es-AR', { minimumFractionDigits: 0 })}</div>
+                    <div className="price">${price.toLocaleString('es-AR', { minimumFractionDigits: 0 })}</div>
                 </div>
                 <div className="description">{item.description}</div>
-                <AddItemButton key={item.id} itemVariantId={item.variantList.items[0].id} quantity={1}></AddItemButton>
+                <AddItemButton key={item.id} itemVariantId={id} quantity={1}></AddItemButton>
             </div>
             <Outlet />
         </>
-
     )
 }
