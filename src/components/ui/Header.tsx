@@ -1,8 +1,19 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { useQuery } from '@apollo/client';
 import { Link } from "react-router-dom";
-import { Totals } from '../../interfaces';
+import { CartContext } from '../../context';
+import { GETACTIVEORDER } from '../../graphql';
 
-export const Header: React.FC<Totals> = ({ totalPrice, totalQuantity }) => {
+export const Header: React.FC = () => {
+    const { loading, error, data } = useQuery(GETACTIVEORDER);
+    const { order, updateOrder } = useContext(CartContext);
+
+    if (loading) return <p>Loading ORDER...</p>;
+    if (error) return <p>{`Error: ${error.message}`}</p>;
+    if (data) {
+        updateOrder?.(data.activeOrder);
+    }
+
     return (
         <header className='header'>
             <Link to="/">
@@ -10,8 +21,8 @@ export const Header: React.FC<Totals> = ({ totalPrice, totalQuantity }) => {
             </Link>
             <Link to="/cart">
                 <div className='totals'>
-                    <div className='amount'>precio total: ${totalPrice.toLocaleString('es-AR', { minimumFractionDigits: 0 })}</div>
-                    <div className='quantity'>cantidad: {totalQuantity} unidades</div>
+                    <div className='amount'>precio total: ${order.total.toLocaleString('es-AR', { minimumFractionDigits: 0 })}</div>
+                    <div className='quantity'>cantidad: {order.totalQuantity} unidades</div>
                 </div>
             </Link>
         </header>
