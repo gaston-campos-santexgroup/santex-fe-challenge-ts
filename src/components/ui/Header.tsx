@@ -10,7 +10,7 @@ export const Header: React.FC = () => {
 
     if (loading) return <p>Loading ORDER...</p>;
     if (error) return <p>{`Error: ${error.message}`}</p>;
-    if (data) {
+    if (data.activeOrder) {
         updateOrder?.(data.activeOrder);
     }
 
