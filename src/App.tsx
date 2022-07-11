@@ -25,7 +25,7 @@ function App() {
           } />
           <Route path="/product/:productId" element={<ProductDetail />} />
           <Route path="cart" element={<Cart />} />
-          <Route path="*" element={<main style={{ padding: "1rem" }}><p>Error 404 - Pagina no encontrada!</p></main>} />
+          <Route path="*" element={<main style={{ padding: "1rem" }}><p>Error 404 - not found!</p></main>} />
         </Routes>
       </BrowserRouter>
     </CartProvider>
