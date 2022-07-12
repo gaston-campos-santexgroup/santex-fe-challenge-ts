@@ -1,3 +1,4 @@
+import { MemoryRouter as Router } from 'react-router-dom';
 import { render, screen } from '@testing-library/react';
 import { MockedProvider } from '@apollo/client/testing';
 import { GET_PRODUCTS } from '../../../graphql';
@@ -6,19 +7,21 @@ import { ProductsList } from '../../../components';
 
 const mocks = [
     {
-      request: {
-        query: GET_PRODUCTS
-      },
-      result: mockedProductList
+        request: {
+            query: GET_PRODUCTS
+        },
+        result: mockedProductList
     }
-  ];
-  
-  
-  it('should render list of 10 products', async () => {
+];
+
+
+it('should render list of 10 products', async () => {
     render(
-      <MockedProvider mocks={mocks} addTypename={true}>
-        <ProductsList />
-      </MockedProvider>
+        <Router>
+            <MockedProvider mocks={mocks} addTypename={true}>
+                <ProductsList />
+            </MockedProvider>
+        </Router>
     );
-     const list = await screen.findByRole('list');  
-  });
+    const list = await screen.findByRole('list');  
+});
