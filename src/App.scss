@@ -49,6 +49,7 @@ $description-width: calc(100 - $img-width - $name-slug-width - $button-width - $
     width: $name-slug-width * 1%;
     .name {
       font-weight: 600;
+      margin: 0;      
     }
     .slug {
       font-size: calc(5px + 0.5vmin);
