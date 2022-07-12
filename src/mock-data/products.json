@@ -10,47 +10,63 @@
                     "variants": [
                         {
                             "id": "1",
-                            "name": "Laptop 13 inch 8GB"
+                            "name": "Laptop 13 inch 8GB",
+                            "__typename": "ProductVariant"
                         },
                         {
                             "id": "2",
-                            "name": "Laptop 15 inch 8GB"
+                            "name": "Laptop 15 inch 8GB",
+                            "__typename": "ProductVariant"
                         },
                         {
                             "id": "3",
-                            "name": "Laptop 13 inch 16GB"
+                            "name": "Laptop 13 inch 16GB",
+                            "__typename": "ProductVariant"
                         },
                         {
                             "id": "4",
-                            "name": "Laptop 15 inch 16GB"
+                            "name": "Laptop 15 inch 16GB",
+                            "__typename": "ProductVariant"
                         }
                     ],
                     "variantList": {
                         "items": [
                             {
-                                "price": 129900
+                                "price": 129900,
+                                "id": "1",
+                                "__typename": "ProductVariant"
                             },
                             {
-                                "price": 139900
+                                "price": 139900,
+                                "id": "2",
+                                "__typename": "ProductVariant"
                             },
                             {
-                                "price": 219900
+                                "price": 219900,
+                                "id": "3",
+                                "__typename": "ProductVariant"
                             },
                             {
-                                "price": 229900
+                                "price": 229900,
+                                "id": "4",
+                                "__typename": "ProductVariant"
                             }
-                        ]
+                        ],
+                        "__typename": "ProductVariantList"
                     },
                     "featuredAsset": {
-                        "source": "https://demo.vendure.io/assets/source/b6/derick-david-409858-unsplash.jpg"
+                        "source": "https://demo.vendure.io/assets/source/b6/derick-david-409858-unsplash.jpg",
+                        "__typename": "Asset"
                     },
                     "assets": [
                         {
                             "id": "1",
                             "name": "derick-david-409858-unsplash.jpg",
-                            "source": "https://demo.vendure.io/assets/source/b6/derick-david-409858-unsplash.jpg"
+                            "source": "https://demo.vendure.io/assets/source/b6/derick-david-409858-unsplash.jpg",
+                            "__typename": "Asset"
                         }
-                    ]
+                    ],
+                    "__typename": "Product"
                 },
                 {
                     "id": "2",
@@ -60,33 +76,43 @@
                     "variants": [
                         {
                             "id": "5",
-                            "name": "Tablet 32GB"
+                            "name": "Tablet 32GB",
+                            "__typename": "ProductVariant"
                         },
                         {
                             "id": "6",
-                            "name": "Tablet 128GB"
+                            "name": "Tablet 128GB",
+                            "__typename": "ProductVariant"
                         }
                     ],
                     "variantList": {
                         "items": [
                             {
-                                "price": 32900
+                                "price": 32900,
+                                "id": "5",
+                                "__typename": "ProductVariant"
                             },
                             {
-                                "price": 44500
+                                "price": 44500,
+                                "id": "6",
+                                "__typename": "ProductVariant"
                             }
-                        ]
+                        ],
+                        "__typename": "ProductVariantList"
                     },
                     "featuredAsset": {
-                        "source": "https://demo.vendure.io/assets/source/5a/kelly-sikkema-685291-unsplash.jpg"
+                        "source": "https://demo.vendure.io/assets/source/5a/kelly-sikkema-685291-unsplash.jpg",
+                        "__typename": "Asset"
                     },
                     "assets": [
                         {
                             "id": "2",
                             "name": "kelly-sikkema-685291-unsplash.jpg",
-                            "source": "https://demo.vendure.io/assets/source/5a/kelly-sikkema-685291-unsplash.jpg"
+                            "source": "https://demo.vendure.io/assets/source/5a/kelly-sikkema-685291-unsplash.jpg",
+                            "__typename": "Asset"
                         }
-                    ]
+                    ],
+                    "__typename": "Product"
                 },
                 {
                     "id": "3",
@@ -96,26 +122,33 @@
                     "variants": [
                         {
                             "id": "7",
-                            "name": "Wireless Optical Mouse"
+                            "name": "Wireless Optical Mouse",
+                            "__typename": "ProductVariant"
                         }
                     ],
                     "variantList": {
                         "items": [
                             {
-                                "price": 1899
+                                "price": 1899,
+                                "id": "7",
+                                "__typename": "ProductVariant"
                             }
-                        ]
+                        ],
+                        "__typename": "ProductVariantList"
                     },
                     "featuredAsset": {
-                        "source": "https://demo.vendure.io/assets/source/0b/oscar-ivan-esquivel-arteaga-687447-unsplash.jpg"
+                        "source": "https://demo.vendure.io/assets/source/0b/oscar-ivan-esquivel-arteaga-687447-unsplash.jpg",
+                        "__typename": "Asset"
                     },
                     "assets": [
                         {
                             "id": "3",
                             "name": "oscar-ivan-esquivel-arteaga-687447-unsplash.jpg",
-                            "source": "https://demo.vendure.io/assets/source/0b/oscar-ivan-esquivel-arteaga-687447-unsplash.jpg"
+                            "source": "https://demo.vendure.io/assets/source/0b/oscar-ivan-esquivel-arteaga-687447-unsplash.jpg",
+                            "__typename": "Asset"
                         }
-                    ]
+                    ],
+                    "__typename": "Product"
                 },
                 {
                     "id": "4",
@@ -125,26 +158,33 @@
                     "variants": [
                         {
                             "id": "8",
-                            "name": "32-Inch Monitor"
+                            "name": "32-Inch Monitor",
+                            "__typename": "ProductVariant"
                         }
                     ],
                     "variantList": {
                         "items": [
                             {
-                                "price": 31000
+                                "price": 31000,
+                                "id": "8",
+                                "__typename": "ProductVariant"
                             }
-                        ]
+                        ],
+                        "__typename": "ProductVariantList"
                     },
                     "featuredAsset": {
-                        "source": "https://demo.vendure.io/assets/source/28/daniel-korpai-1302051-unsplash.jpg"
+                        "source": "https://demo.vendure.io/assets/source/28/daniel-korpai-1302051-unsplash.jpg",
+                        "__typename": "Asset"
                     },
                     "assets": [
                         {
                             "id": "4",
                             "name": "daniel-korpai-1302051-unsplash.jpg",
-                            "source": "https://demo.vendure.io/assets/source/28/daniel-korpai-1302051-unsplash.jpg"
+                            "source": "https://demo.vendure.io/assets/source/28/daniel-korpai-1302051-unsplash.jpg",
+                            "__typename": "Asset"
                         }
-                    ]
+                    ],
+                    "__typename": "Product"
                 },
                 {
                     "id": "5",
@@ -154,33 +194,43 @@
                     "variants": [
                         {
                             "id": "9",
-                            "name": "Curvy Monitor 24 inch"
+                            "name": "Curvy Monitor 24 inch",
+                            "__typename": "ProductVariant"
                         },
                         {
                             "id": "10",
-                            "name": "Curvy Monitor 27 inch"
+                            "name": "Curvy Monitor 27 inch",
+                            "__typename": "ProductVariant"
                         }
                     ],
                     "variantList": {
                         "items": [
                             {
-                                "price": 14374
+                                "price": 14374,
+                                "id": "9",
+                                "__typename": "ProductVariant"
                             },
                             {
-                                "price": 16994
+                                "price": 16994,
+                                "id": "10",
+                                "__typename": "ProductVariant"
                             }
-                        ]
+                        ],
+                        "__typename": "ProductVariantList"
                     },
                     "featuredAsset": {
-                        "source": "https://demo.vendure.io/assets/source/e8/alexandru-acea-686569-unsplash.jpg"
+                        "source": "https://demo.vendure.io/assets/source/e8/alexandru-acea-686569-unsplash.jpg",
+                        "__typename": "Asset"
                     },
                     "assets": [
                         {
                             "id": "5",
                             "name": "alexandru-acea-686569-unsplash.jpg",
-                            "source": "https://demo.vendure.io/assets/source/e8/alexandru-acea-686569-unsplash.jpg"
+                            "source": "https://demo.vendure.io/assets/source/e8/alexandru-acea-686569-unsplash.jpg",
+                            "__typename": "Asset"
                         }
-                    ]
+                    ],
+                    "__typename": "Product"
                 },
                 {
                     "id": "6",
@@ -190,40 +240,53 @@
                     "variants": [
                         {
                             "id": "11",
-                            "name": "High Performance RAM 4GB"
+                            "name": "High Performance RAM 4GB",
+                            "__typename": "ProductVariant"
                         },
                         {
                             "id": "12",
-                            "name": "High Performance RAM 8GB"
+                            "name": "High Performance RAM 8GB",
+                            "__typename": "ProductVariant"
                         },
                         {
                             "id": "13",
-                            "name": "High Performance RAM 16GB"
+                            "name": "High Performance RAM 16GB",
+                            "__typename": "ProductVariant"
                         }
                     ],
                     "variantList": {
                         "items": [
                             {
-                                "price": 13785
+                                "price": 13785,
+                                "id": "11",
+                                "__typename": "ProductVariant"
                             },
                             {
-                                "price": 14639
+                                "price": 14639,
+                                "id": "12",
+                                "__typename": "ProductVariant"
                             },
                             {
-                                "price": 28181
+                                "price": 28181,
+                                "id": "13",
+                                "__typename": "ProductVariant"
                             }
-                        ]
+                        ],
+                        "__typename": "ProductVariantList"
                     },
                     "featuredAsset": {
-                        "source": "https://demo.vendure.io/assets/source/2e/liam-briese-1128307-unsplash.jpg"
+                        "source": "https://demo.vendure.io/assets/source/2e/liam-briese-1128307-unsplash.jpg",
+                        "__typename": "Asset"
                     },
                     "assets": [
                         {
                             "id": "6",
                             "name": "liam-briese-1128307-unsplash.jpg",
-                            "source": "https://demo.vendure.io/assets/source/2e/liam-briese-1128307-unsplash.jpg"
+                            "source": "https://demo.vendure.io/assets/source/2e/liam-briese-1128307-unsplash.jpg",
+                            "__typename": "Asset"
                         }
-                    ]
+                    ],
+                    "__typename": "Product"
                 },
                 {
                     "id": "7",
@@ -233,47 +296,63 @@
                     "variants": [
                         {
                             "id": "14",
-                            "name": "Gaming PC i7-8700 240GB SSD"
+                            "name": "Gaming PC i7-8700 240GB SSD",
+                            "__typename": "ProductVariant"
                         },
                         {
                             "id": "15",
-                            "name": "Gaming PC R7-2700 240GB SSD"
+                            "name": "Gaming PC R7-2700 240GB SSD",
+                            "__typename": "ProductVariant"
                         },
                         {
                             "id": "16",
-                            "name": "Gaming PC i7-8700 120GB SSD"
+                            "name": "Gaming PC i7-8700 120GB SSD",
+                            "__typename": "ProductVariant"
                         },
                         {
                             "id": "17",
-                            "name": "Gaming PC R7-2700 120GB SSD"
+                            "name": "Gaming PC R7-2700 120GB SSD",
+                            "__typename": "ProductVariant"
                         }
                     ],
                     "variantList": {
                         "items": [
                             {
-                                "price": 108720
+                                "price": 108720,
+                                "id": "14",
+                                "__typename": "ProductVariant"
                             },
                             {
-                                "price": 109995
+                                "price": 109995,
+                                "id": "15",
+                                "__typename": "ProductVariant"
                             },
                             {
-                                "price": 93120
+                                "price": 93120,
+                                "id": "16",
+                                "__typename": "ProductVariant"
                             },
                             {
-                                "price": 94920
+                                "price": 94920,
+                                "id": "17",
+                                "__typename": "ProductVariant"
                             }
-                        ]
+                        ],
+                        "__typename": "ProductVariantList"
                     },
                     "featuredAsset": {
-                        "source": "https://demo.vendure.io/assets/source/63/florian-olivo-1166419-unsplash.jpg"
+                        "source": "https://demo.vendure.io/assets/source/63/florian-olivo-1166419-unsplash.jpg",
+                        "__typename": "Asset"
                     },
                     "assets": [
                         {
                             "id": "7",
                             "name": "florian-olivo-1166419-unsplash.jpg",
-                            "source": "https://demo.vendure.io/assets/source/63/florian-olivo-1166419-unsplash.jpg"
+                            "source": "https://demo.vendure.io/assets/source/63/florian-olivo-1166419-unsplash.jpg",
+                            "__typename": "Asset"
                         }
-                    ]
+                    ],
+                    "__typename": "Product"
                 },
                 {
                     "id": "8",
@@ -283,54 +362,73 @@
                     "variants": [
                         {
                             "id": "18",
-                            "name": "Hard Drive 1TB"
+                            "name": "Hard Drive 1TB",
+                            "__typename": "ProductVariant"
                         },
                         {
                             "id": "19",
-                            "name": "Hard Drive 2TB"
+                            "name": "Hard Drive 2TB",
+                            "__typename": "ProductVariant"
                         },
                         {
                             "id": "20",
-                            "name": "Hard Drive 3TB"
+                            "name": "Hard Drive 3TB",
+                            "__typename": "ProductVariant"
                         },
                         {
                             "id": "21",
-                            "name": "Hard Drive 4TB"
+                            "name": "Hard Drive 4TB",
+                            "__typename": "ProductVariant"
                         },
                         {
                             "id": "22",
-                            "name": "Hard Drive 6TB"
+                            "name": "Hard Drive 6TB",
+                            "__typename": "ProductVariant"
                         }
                     ],
                     "variantList": {
                         "items": [
                             {
-                                "price": 3799
+                                "price": 3799,
+                                "id": "18",
+                                "__typename": "ProductVariant"
                             },
                             {
-                                "price": 5374
+                                "price": 5374,
+                                "id": "19",
+                                "__typename": "ProductVariant"
                             },
                             {
-                                "price": 7896
+                                "price": 7896,
+                                "id": "20",
+                                "__typename": "ProductVariant"
                             },
                             {
-                                "price": 9299
+                                "price": 9299,
+                                "id": "21",
+                                "__typename": "ProductVariant"
                             },
                             {
-                                "price": 13435
+                                "price": 13435,
+                                "id": "22",
+                                "__typename": "ProductVariant"
                             }
-                        ]
+                        ],
+                        "__typename": "ProductVariantList"
                     },
                     "featuredAsset": {
-                        "source": "https://demo.vendure.io/assets/source/59/vincent-botta-736919-unsplash.jpg"
+                        "source": "https://demo.vendure.io/assets/source/59/vincent-botta-736919-unsplash.jpg",
+                        "__typename": "Asset"
                     },
                     "assets": [
                         {
                             "id": "8",
                             "name": "vincent-botta-736919-unsplash.jpg",
-                            "source": "https://demo.vendure.io/assets/source/59/vincent-botta-736919-unsplash.jpg"
+                            "source": "https://demo.vendure.io/assets/source/59/vincent-botta-736919-unsplash.jpg",
+                            "__typename": "Asset"
                         }
-                    ]
+                    ],
+                    "__typename": "Product"
                 },
                 {
                     "id": "9",
@@ -340,26 +438,33 @@
                     "variants": [
                         {
                             "id": "23",
-                            "name": "Clacky Keyboard"
+                            "name": "Clacky Keyboard",
+                            "__typename": "ProductVariant"
                         }
                     ],
                     "variantList": {
                         "items": [
                             {
-                                "price": 7489
+                                "price": 7489,
+                                "id": "23",
+                                "__typename": "ProductVariant"
                             }
-                        ]
+                        ],
+                        "__typename": "ProductVariantList"
                     },
                     "featuredAsset": {
-                        "source": "https://demo.vendure.io/assets/source/b8/juan-gomez-674574-unsplash.jpg"
+                        "source": "https://demo.vendure.io/assets/source/b8/juan-gomez-674574-unsplash.jpg",
+                        "__typename": "Asset"
                     },
                     "assets": [
                         {
                             "id": "9",
                             "name": "juan-gomez-674574-unsplash.jpg",
-                            "source": "https://demo.vendure.io/assets/source/b8/juan-gomez-674574-unsplash.jpg"
+                            "source": "https://demo.vendure.io/assets/source/b8/juan-gomez-674574-unsplash.jpg",
+                            "__typename": "Asset"
                         }
-                    ]
+                    ],
+                    "__typename": "Product"
                 },
                 {
                     "id": "10",
@@ -369,28 +474,36 @@
                     "variants": [
                         {
                             "id": "24",
-                            "name": "Ethernet Cable"
+                            "name": "Ethernet Cable",
+                            "__typename": "ProductVariant"
                         }
                     ],
                     "variantList": {
                         "items": [
                             {
-                                "price": 597
+                                "price": 597,
+                                "id": "24",
+                                "__typename": "ProductVariant"
                             }
-                        ]
+                        ],
+                        "__typename": "ProductVariantList"
                     },
                     "featuredAsset": {
-                        "source": "https://demo.vendure.io/assets/source/86/thomas-q-1229169-unsplash.jpg"
+                        "source": "https://demo.vendure.io/assets/source/86/thomas-q-1229169-unsplash.jpg",
+                        "__typename": "Asset"
                     },
                     "assets": [
                         {
                             "id": "10",
                             "name": "thomas-q-1229169-unsplash.jpg",
-                            "source": "https://demo.vendure.io/assets/source/86/thomas-q-1229169-unsplash.jpg"
+                            "source": "https://demo.vendure.io/assets/source/86/thomas-q-1229169-unsplash.jpg",
+                            "__typename": "Asset"
                         }
-                    ]
+                    ],
+                    "__typename": "Product"
                 }
-            ]
+            ],
+            "__typename": "ProductList"
         }
     }
 }
