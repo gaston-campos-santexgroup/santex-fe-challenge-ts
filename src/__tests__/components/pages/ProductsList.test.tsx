@@ -1,5 +1,5 @@
 import { MemoryRouter as Router } from 'react-router-dom';
-import { render, screen } from '@testing-library/react';
+import { render, screen, within } from '@testing-library/react';
 import { MockedProvider } from '@apollo/client/testing';
 import { GET_PRODUCTS } from '../../../graphql';
 import { mockedProductList } from '../../../mock-data';
@@ -23,5 +23,8 @@ it('should render list of 10 products', async () => {
             </MockedProvider>
         </Router>
     );
-    const list = await screen.findByRole('list');  
+    const list = await screen.findByRole('list');
+    const { getAllByRole } = within(list)
+    const items = getAllByRole("listitem");
+    expect(items.length).toBe(10);
 });
