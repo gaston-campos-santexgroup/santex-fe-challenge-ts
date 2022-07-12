@@ -10,7 +10,7 @@ export const ProductsList = () => {
     if (loading) return <p>Loading...</p>;
     if (error) return <p>{`Error: ${error.message}`}</p>;
     return (
-        <div className="productsList" role="list">
+        <div className="products-list" id="products-list" role="list">
             {
                 data.products.items.map((item: Item) => (
                     <Product key={item.id} item={item} />
