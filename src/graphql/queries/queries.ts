@@ -2,7 +2,7 @@
 
 import { gql } from '@apollo/client/core';
 
-export const PRODUCTS = gql`
+export const GET_PRODUCTS = gql`
   query {
     products(options: { take: 10 }) {
       
@@ -37,7 +37,7 @@ export const PRODUCTS = gql`
   }
 `;
 
-export const PRODUCTBYID = gql`
+export const GET_PRODUCT_BY_ID = gql`
   query GetProductById ($id:ID) {
     product(id:$id) {
           id
@@ -69,7 +69,7 @@ export const PRODUCTBYID = gql`
   }
 `;
 
-export const GETACTIVEORDER = gql`
+export const GET_ACTIVE_ORDER = gql`
 query GetActiveOrder {
   activeOrder {
       totalQuantity

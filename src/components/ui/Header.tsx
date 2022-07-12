@@ -2,10 +2,10 @@ import React, { useContext } from 'react';
 import { useQuery } from '@apollo/client';
 import { Link } from "react-router-dom";
 import { CartContext } from '../../context';
-import { GETACTIVEORDER } from '../../graphql';
+import { GET_ACTIVE_ORDER } from '../../graphql';
 
 export const Header: React.FC = () => {
-    const { loading, error, data } = useQuery(GETACTIVEORDER);
+    const { loading, error, data } = useQuery(GET_ACTIVE_ORDER);
     const { order, updateOrder } = useContext(CartContext);
 
     if (loading) return <p>Loading ORDER...</p>;

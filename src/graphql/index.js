@@ -1,4 +1,4 @@
 import { ADD_ITEM_TO_ORDER } from './mutations/mutations';
-import { PRODUCTBYID, PRODUCTS, GETACTIVEORDER } from './queries/queries';
+import { GET_PRODUCT_BY_ID, GET_PRODUCTS, GET_ACTIVE_ORDER } from './queries/queries';
 
-export { PRODUCTBYID, PRODUCTS, GETACTIVEORDER, ADD_ITEM_TO_ORDER }
+export { GET_PRODUCT_BY_ID, GET_PRODUCTS, GET_ACTIVE_ORDER, ADD_ITEM_TO_ORDER }

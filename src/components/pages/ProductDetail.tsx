@@ -1,12 +1,12 @@
 import { useQuery } from '@apollo/client';
 import { useParams } from 'react-router-dom';
-import { PRODUCTBYID } from '../../graphql';
+import { GET_PRODUCT_BY_ID } from '../../graphql';
 import { Item } from '../../interfaces';
 
 export const ProductDetail = () => {
 
     const params = useParams();
-    const { loading, error, data } = useQuery(PRODUCTBYID, { variables: { id: params.productId } });
+    const { loading, error, data } = useQuery(GET_PRODUCT_BY_ID, { variables: { id: params.productId } });
 
 
     if (loading) return <p>Loading...</p>;
