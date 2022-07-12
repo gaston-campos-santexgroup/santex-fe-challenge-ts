@@ -1,6 +1,6 @@
 import { Link, Outlet } from 'react-router-dom';
+import { AddItemButton } from '..';
 import { Item } from '../../interfaces';
-import { AddItemButton } from './AddItemButton';
 
 interface IFuncProd {
     item: Item;
