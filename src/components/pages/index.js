@@ -1,3 +1,5 @@
-import { Cart } from './Cart';
+import { Cart, } from './Cart';
+import { ProductDetail } from './ProductDetail';
+import { ProductsList } from './ProductsList';
 
-export { Cart }
+export { Cart, ProductsList, ProductDetail }

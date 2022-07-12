@@ -1,4 +1,4 @@
-import { Cart } from './pages'
-import { Header, Product, ProductDetail } from './ui'
+import { Cart, ProductsList, ProductDetail } from './pages'
+import { Header, Product } from './ui'
 
-export { Header, Product, ProductDetail, Cart }
+export { Header, Product, ProductDetail, Cart, ProductsList }
