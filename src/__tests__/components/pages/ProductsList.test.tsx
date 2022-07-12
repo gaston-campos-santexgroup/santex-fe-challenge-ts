@@ -15,7 +15,7 @@ const mocks = [
 ];
 
 
-it('should render list of 10 products', async () => {
+it('should render list of 10 products, each one with a title, img and add button', async () => {
     render(
         <Router>
             <MockedProvider mocks={mocks} addTypename={true}>
