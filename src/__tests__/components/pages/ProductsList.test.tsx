@@ -26,5 +26,16 @@ it('should render list of 10 products', async () => {
     const list = await screen.findByRole('list');
     const { getAllByRole } = within(list)
     const items = getAllByRole("listitem");
+
     expect(items.length).toBe(10);
+
+    for (const item of items) {
+        const { getAllByRole } = within(item)
+        const image = getAllByRole("img");
+        const addButton = getAllByRole("button");
+        const title = getAllByRole("heading");
+        expect(image.length).toBe(1);
+        expect(addButton.length).toBe(1);
+        expect(title.length).toBe(1);
+    }
 });
