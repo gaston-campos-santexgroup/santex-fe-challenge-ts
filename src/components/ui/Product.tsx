@@ -19,7 +19,7 @@ export const Product: React.FC<IFuncProd> = ({ item }) => {
                         to={`/product/${item.id}`}
                         key={item.id}
                     >
-                        <div className="name">{item.name}</div>
+                        <h3 className="name">{item.name}</h3>
                     </Link>
 
                     <div className="slug">{item.slug}</div>
