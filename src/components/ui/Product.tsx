@@ -11,7 +11,7 @@ export const Product: React.FC<IFuncProd> = ({ item }) => {
     const { source } = item.assets[0];
     return (
         <>
-            <div className='product'>
+            <div className='product' role="listitem">
                 <img src={source} alt={item.name} />
                 <div className="name-slug">
                     <Link
