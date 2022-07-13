@@ -1,6 +1,6 @@
 import { MemoryRouter as Router } from 'react-router-dom';
 import { MockedProvider } from '@apollo/client/testing';
-import { render, screen, waitFor } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { AddItemButton, Header } from '../../../components';
 import { CartProvider } from '../../../context';
@@ -9,7 +9,7 @@ import { mockedAddedItemId1ToOrder, mockedProductList } from '../../../mock-data
 
 it("Should render updated cart data after adding item id #1", async () => {
   const ItemIdToTest = 1;
-  const item = mockedProductList.data.products.items.find(item => item.id === ItemIdToTest.toString());
+  const item = mockedProductList.data.products.items.find(x => x.id === ItemIdToTest.toString());
   const { id } = item!.variantList.items[0];
   const getActiveOrderMock = [
     {
@@ -54,8 +54,8 @@ it("Should render updated cart data after adding item id #1", async () => {
   userEvent.click(button); // Simulate a click and fire the mutation
   const clickedButton = await screen.findByText("Submitting...");
   expect(clickedButton).toBeInTheDocument();
-  // const quantityAfterMutation = (await screen.findByTestId("total-quantity")).innerHTML;
-  // const after = await waitFor(() => expect(quantityAfterMutation).toContain('1'));
-  // console.log('after',after)
-  // expect(quantityAfterMutation).toBe('1');
+  await screen.findByText("Add Item");
+
+  const quantityAfterMutation = (await screen.findByTestId("total-quantity")).innerHTML;
+  expect(quantityAfterMutation).toContain('1');
 });
