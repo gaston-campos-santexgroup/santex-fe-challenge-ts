@@ -1,0 +1,27 @@
+{
+    "data": {
+        "addItemToOrder": {
+            "totalQuantity": 1,
+            "total": 129900,
+            "createdAt": "2022-07-12T18:37:54.000Z",
+            "id": "15",
+            "code": "ADBUQ2C9PNL2GD92",
+            "orderPlacedAt": null,
+            "state": "AddingItems",
+            "lines": [
+                {
+                    "quantity": 1,
+                    "productVariant": {
+                        "id": "1",
+                        "productId": "1",
+                        "name": "Laptop 13 inch 8GB",
+                        "price": 129900,
+                        "__typename": "ProductVariant"
+                    },
+                    "__typename": "OrderLine"
+                }
+            ],
+            "__typename": "Order"
+        }
+    }
+}
