@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { useQuery } from '@apollo/client';
 import { Link } from "react-router-dom";
 import { CartContext } from '../../context';
@@ -8,11 +8,15 @@ export const Header: React.FC = () => {
     const { loading, error, data } = useQuery(GET_ACTIVE_ORDER);
     const { order, updateOrder } = useContext(CartContext);
 
+    useEffect(() => {
+        if (data?.activeOrder) {
+            updateOrder?.(data.activeOrder);
+        }
+    }, [data, updateOrder])
+
     if (loading) return <p>Loading ORDER...</p>;
     if (error) return <p>{`Error: ${error.message}`}</p>;
-    if (data.activeOrder) {
-        updateOrder?.(data.activeOrder);
-    }
+
 
     return (
         <header className='header'>
