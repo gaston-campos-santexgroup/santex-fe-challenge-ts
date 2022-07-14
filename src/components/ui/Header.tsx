@@ -25,8 +25,8 @@ export const Header: React.FC = () => {
             </Link>
             <Link to="/cart">
                 <div className='totals'>
-                    <div className='amount'>precio total: ${order.total.toLocaleString('es-AR', { minimumFractionDigits: 0 })}</div>
-                    <div className='quantity'>cantidad: <span data-testid="total-quantity">{order.totalQuantity}</span> unidades</div>
+                    <div className='amount'>Total: ${order.total.toLocaleString('es-AR', { minimumFractionDigits: 0 })}</div>
+                    <div className='quantity'><span data-testid="total-quantity">{order.totalQuantity}</span> items in Cart</div>
                 </div>
             </Link>
         </header>
