@@ -1,10 +1,7 @@
-import { AddItemToOrder } from './cart.interface';
-
 export interface Products {
     items: Item[];
 
 }
-
 export interface Item {
     id: string;
     name: string;
